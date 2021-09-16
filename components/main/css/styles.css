@@ -1,0 +1,9 @@
+.main {
+  margin: 20px;
+  padding: 40px 20px;
+  width: calc(100vw - 240px);
+  height: calc(100% - 40px);
+  position: relative;
+  background: #ffffff;
+  border-radius: .25rem;
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OC Web App</title>
+    <style type="text/css">
+    * {
+        box-sizing: border-box;
+    }
+    html {
+        font-size: 16px;
+        line-height: 1.2;
+    }
+    body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        font-family: sans-serif;
+    }
+    .wrapper {
+        margin: 0;
+        padding: 0;
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        display: grid;
+        grid-template-rows: 66px 1fr 34px;
+    }
+    .wrapper > main {
+        margin: 0;
+        padding: 0;
+        position: relative;
+        width: 100vw;
+        height: 100%;
+        display: flex;
+        background-color: #eee;;
+    }
+    </style>
+    <script>
+        window.oc = window.oc || {};
+        oc.conf = oc.conf || {};
+        oc.conf.templates = (oc.conf.templates || [] ).concat([
+          {"type":"oc-template-es6","version":"1.0.1","externals":[]}
+        ]);
+
+        window.oc.nav = {
+            navItems: ['Home','About','Contact']
+        };
+    </script>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <oc-component href="http://localhost:3030/header/1.0.0/">
+            Optionally, some failover text here
+          </oc-component>
+        </header>
+        <main>
+            <oc-component href="http://localhost:3030/aside/1.0.0/">
+            Optionally, some failover text here
+          </oc-component>
+          <oc-component href="http://localhost:3030/main/1.0.0/">
+          Optionally, some failover text here
+        </oc-component>
+        </main>
+        <footer>
+            <oc-component href="http://localhost:3030/footer/1.0.0/">
+            Optionally, some failover text here
+          </oc-component>
+        </footer>
+    </div>
+    <script src="http://localhost:3030/oc-client/client.js"></script>
+</body>
+</html>
